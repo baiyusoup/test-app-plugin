@@ -57,6 +57,10 @@ class Demo {
 console.log('Hello Plugin');
 if (window.registerPlugin) {
   const p = new Demo();
-  console.log("p", p);
   window.registerPlugin(p);
+}
+
+if (remApp) {
+  const p = new Demo();
+  remApp.register(p);
 }
